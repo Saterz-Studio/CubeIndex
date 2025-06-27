@@ -306,7 +306,7 @@
               <select
                 id="itemsPerPage"
                 bind:value={$itemsPerPage}
-                class="px-7 py-2 rounded-lg bg-base-200 border border-base-300"
+                class="py-2 rounded-lg bg-base-200 border border-base-300"
                 style="width:auto"
               >
                 <option value={6}>6</option>

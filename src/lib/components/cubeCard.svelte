@@ -10,7 +10,7 @@
 
 <div>
   <div
-    class="bg-base-200 border border-base-300 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col"
+    class="bg-base-200 border border-base-300 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col hover:-translate-y-2 hover:scale-[1.01] transform transition duration-200 ease-in-out"
   >
     {#if image}
       <img
@@ -73,6 +73,7 @@
         </a>
       {/if}
     </div>
+    
   </div>
   {#if openAddCard}
     <AddCube

@@ -145,7 +145,7 @@
           ></textarea>
         </label>
         <label class="flex flex-col">
-          <span class="label-text">Acquired The</span>
+          <span class="label-text">Date Acquired</span>
           <input
             name="acquiredAt"
             type="date"

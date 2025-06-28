@@ -113,7 +113,7 @@
         </button>
 
         {#if notificationOpen}
-          <NotificationCenter {notificationOpen} {notifications} />
+          <NotificationCenter {notifications} close={() => (notificationOpen = false)} />
         {/if}
       </div>
 

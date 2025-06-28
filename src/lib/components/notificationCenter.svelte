@@ -1,7 +1,7 @@
 <script lang="ts">
   import { blur } from "svelte/transition";
 
-  let { notificationOpen, notifications } = $props();
+  let { notifications, close } = $props();
 
   function formatDate(dateString: string): string {
     const date = new Date(dateString);
@@ -75,10 +75,7 @@
   <div
     class="px-5 py-3 bg-base-200 border-t border-base-300 flex justify-end gap-3"
   >
-    <button
-      class="text-xs link link-hover cursor-pointer"
-      onclick={() => (notificationOpen = false)}
-    >
+    <button class="text-xs link link-hover cursor-pointer" onclick={close}>
       Close
     </button>
   </div>

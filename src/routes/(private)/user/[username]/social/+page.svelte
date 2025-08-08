@@ -41,11 +41,7 @@
       <div class="flex flex-wrap gap-6">
         {#each following as f}
           <a class="flex flex-col items-center" href="/user/{f.username}">
-            <Avatar
-              profile={f}
-              imgSize="size-24 sm:size-24"
-              textSize="text-6xl"
-            />
+            <Avatar profile={f} size="md" />
             <span class="text-sm">{f.display_name}</span>
           </a>
         {:else}
@@ -81,11 +77,7 @@
       <div class="flex flex-wrap gap-6">
         {#each followers as f}
           <a class="flex flex-col items-center" href="/user/{f.username}">
-            <Avatar
-              profile={f}
-              imgSize="size-24 sm:size-24"
-              textSize="text-6xl"
-            />
+            <Avatar profile={f} size="md" />
             <span class="text-sm">{f.display_name}</span>
           </a>
         {:else}

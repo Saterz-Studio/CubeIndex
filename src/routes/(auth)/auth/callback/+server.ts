@@ -38,12 +38,11 @@ export const GET: RequestHandler = async ({ url, locals: { supabase } }) => {
   const newId = maxData?.length ? maxData[0].id + 1 : 1;
 
   const userId = data.user?.id;
-  const display_name = data.user.user_metadata.full_name;
   const username = data.user.user_metadata.full_name;
 
   const { error: profileError } = await supabase
     .from("profiles")
-    .insert({ id: newId, user_id: userId, username, display_name, verified: true });
+    .insert({ id: newId, user_id: userId, username, verified: "TRUE" });
 
   if (profileError) throw error(500, profileError.message);
 

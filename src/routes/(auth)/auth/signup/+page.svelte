@@ -7,7 +7,6 @@
   import { page } from "$app/state";
 
   let { form } = $props();
-  let display_name: string = $state("");
   let username: string = $state("");
   let email: string = $state("");
   let password: string = $state("");
@@ -52,25 +51,11 @@
           }}
           class="space-y-6"
         >
-          <!-- Display Name -->
-          <div>
-            <label for="username" class="block text-sm font-medium">
-              Display Name
-            </label>
-            <input
-              name="display_name"
-              type="text"
-              bind:value={display_name}
-              class="input w-full"
-              required
-            />
-          </div>
-
           <!-- Username -->
           <div>
-            <label for="username" class="block text-sm font-medium">
-              Username
-            </label>
+            <label for="username" class="block text-sm font-medium"
+              >Username</label
+            >
             <input
               name="username"
               type="text"
@@ -162,8 +147,7 @@
               !password ||
               !acceptedTOS ||
               !confirmPassword ||
-              !username ||
-              !display_name}
+              !username}
           >
             {#if isSubmitting}
               <span class="loading loading-spinner"></span>

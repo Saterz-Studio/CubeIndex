@@ -15,10 +15,10 @@
       if (data.success) {
         location.reload();
       } else {
-        throw new Error(`Failed to follow user: ${data.error}`);
+        throw new Error(data.error);
       }
     } catch (err: any) {
-      throw new Error(`Network error while trying to follow user: ${err.message}`);
+      throw new Error(err.message);
     }
   }
 
@@ -35,10 +35,10 @@
       if (data.success) {
         location.reload();
       } else {
-        new Error(`Failed to unfollow user: ${data.error}`);
+        new Error(data.error);
       }
     } catch (err: any) {
-      new Error(`Network error while trying to unfollow user: ${err.message}`);
+      new Error(err.message);
     }
   }
 </script>

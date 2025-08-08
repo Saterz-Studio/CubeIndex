@@ -1,13 +1,12 @@
 import type { PageServerLoad } from "./$types";
 import { error } from "@sveltejs/kit";
 
-export const load = (async ({ locals, parent }) => {
-  const data = await parent();
+export const load = (async ({ locals }) => {
   const { data: user_achievements, error: userAchieveError } =
     await locals.supabase
       .from("user_achievements")
       .select("*")
-      .eq("user_id", data.profile.user_id);
+      .eq("user_id", locals.user?.id);
 
   if (userAchieveError) throw error(500, userAchieveError.message);
 
